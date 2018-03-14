@@ -16,6 +16,7 @@ public class Main {
 
             	// Constrói a visão.
             	View view = new View(model);
+            	
 
             	// Constrói o controlador.
             	Controller controller = new Controller(model,view);
@@ -25,6 +26,9 @@ public class Main {
 
             	// Coloca a visão dentro da janela.
             	frame.setContentPane(view);
+            	
+            	// Adiciona o controlador como observador do teclado.
+            	frame.addKeyListener(controller);
 
             	// Configura a janela para encerrar o programa quando for fechada.
             	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
